@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        li {
+            color: rgb(255, 47, 165);
+        }
+        #fruits-title {
+            font-size: xx-large;
+            color: chocolate;
+        }
+        .important-places {
+            color: blueviolet;
+            font: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome To DOM</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio numquam cum aliquam aliquid, eius eveniet tempore adipisci natus quae possimus temporibus vero error quisquam beatae minus reprehenderit distinctio? Facere, amet!</p>
+    </header>
+    <main>
+        <section>
+            <h1>My Name (4)</h1>
+            <ul>
+                <li>My My My My</li>
+                <li>Name Name Name Name</li>
+                <li>is is is is</li>
+                <li>Pritom Pritom Pritom Pritom</li>
+            </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title">Healthy Fruits</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places-title">Places I Want to Visit</h1>
+            <li class="important-places">Waterfall</li>
+            <li class="other-place">Mountain</li>
+            <li class="other-place">Village</li>
+            <li class="important-places">Sea-Beach</li>
+        </section>
+    </main>
+    <script src="js/dom.js"></script>
+    <script src="js/styleisjs.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for(const li of liCollection){
+            // console.log(li.innerText);
+        }
+// opt 1
+        const allHeadings = document.getElementByTagName('h1');
+
+        for(const h1 of allHeadings){
+            // console.log(h1.innerText);
+        }
+// opt 2
+        const fruitstitle = document.getElementById('fruits-title');
+// opt 3
+        const places = document.getElementsByClassName('important-places');
+        for(const place of places){
+            console.log(place.innerText);
+        }
+// opt 4 : querySelector
+// opt 5
+        const someLi = document.querySelectorAll('.fruits-container');
+        // console.log(someLi);
+        for(const li of someLi){
+            console.log(li.innerText);
+        }
+        
+    </script>
+    <!-- <script>
+        const student = {
+            name: 'Pritom',
+            ID: 11120,
+            study: function (time){
+                console.log(time, 'study kortese');
+            }
+        }
+        console.log('Adding JS inside from the html file.');
+    </script> -->
+</body>
+</html>
+<!-- go to console in chrome inspect -->
+
+<!-- document -->
+<!-- document.body -->
+
+<!-- document.getElementByTagName -->
+<!-- student.study(4) -->
+
+<!-- document.getElementByTagName -->
+<!-- document.getElementsByTagName('h1') -->
+<!-- document.getElementsByTagName('li') -->
+
+<!-- document.getElementById-->
+<!-- document.getElementById('fruits-title')-->
+<!-- document.getElementById('places-title')-->
+
+<!-- document.querySelectorAll('#fruits-title') (for css) -->
+<!-- document.querySelector('.fruits-container li') (for css) --> 
+
+<!-- document.getElementById('fruits-title').style.color= 'black' -->
