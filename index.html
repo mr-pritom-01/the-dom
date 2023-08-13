@@ -42,7 +42,7 @@
                 <li>Carrot</li>
             </ul>
         </section>
-        <section>
+        <section id="places-container">
             <h1 id="places-title">Places I Want to Visit</h1>
             <li class="important-places">Waterfall</li>
             <li class="other-place">Mountain</li>
@@ -59,7 +59,7 @@
             // console.log(li.innerText);
         }
 // opt 1
-        const allHeadings = document.getElementByTagName('h1');
+        const allHeadings = document.getElementsByTagName('h1');
 
         for(const h1 of allHeadings){
             // console.log(h1.innerText);
@@ -69,14 +69,14 @@
 // opt 3
         const places = document.getElementsByClassName('important-places');
         for(const place of places){
-            console.log(place.innerText);
+            // console.log(place.innerText);
         }
 // opt 4 : querySelector
 // opt 5
         const someLi = document.querySelectorAll('.fruits-container');
         // console.log(someLi);
         for(const li of someLi){
-            console.log(li.innerText);
+            // console.log(li.innerText);
         }
         
     </script>
